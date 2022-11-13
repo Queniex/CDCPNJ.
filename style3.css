@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Dosis:wght@500&family=Luckiest+Guy&family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    background-color: white;
+}
+
+main{
+    width:auto;
+    background-color: white;
+}
+
+.mainindex{
+    height: 600px;
+}
+
+.maincos{
+    height: 1350px;
+}
+
+.maintupoksi{
+    height: 660px;
+}
+
+.mainprocedure{
+    height: 850px;
+}
+
+/*TUPOKSI TEAM */
+.tupoksi{
+    text-align: center;
+    margin-top: 30px; 
+}
+
+.tupoksititle{
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+.contenttupoksi{ 
+    margin-top: 30px;
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    background-color: rgba(116, 180, 196, 0.342);
+    border-radius: 40px;
+    list-style-position: inside;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+.cont-bottupoksi{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.cont-bottupoksi ol{
+    text-align: left;
+}
+
+.cont-bottupoksi div{
+    width: 400px;
+    height: 310px;
+}
+
+/* -- */
+
+/* CHOICE OF SERVICES */
+.costitle{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+ul.cos2{
+    list-style-type:circle;
+}
+
+mark{
+    background-color: white;
+    color: rgb(116,180,196);
+}
+.grid-cont-cos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.658);
+}
+.grid-top-cos{
+    background-color: rgb(116,180,196);
+    color: white;
+    padding: 20px 20px;
+    border-radius: 1em;
+    text-align: center;
+}
+.grid-bot-cos{
+    background-color: rgba(116, 180, 196, 0.342);
+    padding: 20px 20px;
+    border-radius: 1em;
+    text-align: left;
+}
+/* -- */
+
+/* VACANCIES PROCEDURE */
+
+.procedure { 
+    grid-area: left; 
+    height: auto;
+    background-color: rgba(116, 180, 196, 0.342);
+    color: black;
+}
+.lowongan { 
+    grid-area: right-up;
+    height: auto;
+    background-color: rgb(116,180,196);
+    color: white;
+}
+.content-lowongan { 
+    grid-area: right-down; 
+    height: auto; 
+    background-color: rgba(116, 180, 196, 0.342);
+    color: white;
+}
+
+.grid-container-procedure {
+    margin-top: 50px;
+  display: grid;
+  grid-template-areas:
+    'left left left  right-up'
+    'left left left  right-down';
+  gap: 30px;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.grid-container-procedure > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+p.proceduretext{
+    text-align: left;
+    margin: 20px 20px 0 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+ol.procedurelist{
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+ol li a.pro{
+    text-decoration: none;
+}
+
+li.vacancies{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul li a.vacancies{
+    color: white;
+    text-decoration: none;
+}
+
+ul li a.vacancies:hover{
+    color:rgb(3, 56, 70);
+}
+
+.content-lowongan .vacancies a{
+    color: #5470b850;
+}
+
+/* --*/
+
+
+
+nav{
+    background-color: rgb(6, 133, 152);
+    z-index: 10;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+div .sticky{
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+nav .logo{
+    height: auto;
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 2vw;
+    float: left;
+    color: white;
+    font-size: 3vw;
+    font-weight: 200;
+    line-height: 50px;
+    padding: 3px 2px;
+}
+
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    position: relative;
+    margin-right: 6vw;
+}
+
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: rgb(6, 133, 152);
+    margin: 0 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    font-size: 12px;
+    padding: 8px 15px;
+}
+
+nav ul ul li a{
+    color: rgb(0, 0, 0);
+}
+
+nav ul li a:hover{
+    color:cyan;
+    background-color: #423f3f70;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #3ff,
+                0 0 5px #6ff;
+    background: rgb(207, 205, 205);
+    color: rgb(6, 133, 152);
+
+}
+
+nav ul ul{
+    position: absolute;
+    top: 53px;
+    opacity: 0;
+    line-height: 5px;
+    background-color: #ffffff;
+    visibility: hidden;
+    color: rgb(6, 133, 152);
+}
+ 
+nav ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li{
+    color: rgb(6, 133, 152);
+    position: relative;
+    margin: 0px;
+    width: 190px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.747);
+    background-color: rgb(6, 133, 152);
+
+}
+
+.show, .icon, input{
+    display: none;
+}
+
+@media all and (max-width: 968px){
+    
+/* Navbar */
+
+   nav .ul{
+    margin-right: 0px;
+    float: left;
+   } 
+
+   nav .logo{
+    padding-left: 30px;
+    width: 12%;
+   }
+
+   nav .logo img{
+    width: 30px;
+    height: 20px;
+   } 
+
+   nav .ul li, nav .ul .ul li{
+    display: block;
+    width: 100%;
+   }
+
+   nav .ul .ul li{
+    background-color: #ffffff31;
+    border: 1px solid black;
+   }
+
+   nav .ul .ul{
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible ;
+   }
+
+   nav .ul .ul .a{
+    padding-left: 40px;
+   }
+
+   .show{
+    display: block;
+    color: white;
+    padding: 0 15px;
+    line-height: 70px;
+    font-size: 12px;
+    cursor: pointer;
+   }
+
+   .show:hover{
+    color: rgb(190, 188, 26);
+   }
+
+   nav .ul .ul li .a{
+    color: rgb(0, 0, 0);
+    width: 100%;
+   }
+
+   nav .ul .ul li:hover .a{
+    color: rgba(10, 189, 202, 0.644);
+   }
+
+   .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+   }
+
+   nav .ul li .a:hover{
+    box-shadow: none;
+   }
+
+   .show + .a, .ul{
+    display: none;
+
+   }
+
+   [id^=btn]:checked + .ul{
+    display: block;
+   }
+
+   /*  */
+
+   /* Image */
+
+}
+
+   .container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color:rgb(6, 133, 152) ;
+    padding: 40px 5px;
+}
+
+footer .logo{
+    color: white;
+    font-size: 50px;
+    text-align:end;
+}
+
+.footer-col{
+    width: 20%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: 500;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+.footer-col h4:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 80px;
+    background-color: rgba(58, 58, 58, 0.295);
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: yellow;
+    padding-left: 7px;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color:yellow;
+}
+
+@media(max-width: 767px) {
+    .footer-col{
+        width: 100%;
+        padding: 0 30px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}

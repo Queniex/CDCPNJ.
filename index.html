@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header --> 
+    <nav class="sticky">
+        <img class="logo" src="Logo PNJ.png" alt="">
+        <div class="logo">PNJ</div>
+        <label for="btn" class="icon">
+          <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul class="ul">
+            <li><a class="a" href="index.html">HOME</a></li>
+            <li>
+              <label for="btn-1" class="show">ABOUT US + </label>
+                <a class="a" href="#">ABOUT US</a>
+                <input type="checkbox" id="btn-1">
+                <ul class="ul">
+                    <li><a class="a" href="cdcteam.html">CDC TEAM</a></li>
+                    <li><a class="a" href="tupoksiteam.html">TUPOKSI TEAM</a></li>
+                </ul>
+            </li>
+            <li><a class="a" href="Career-Info.html">CAREER INFO</a></li>
+            <li>
+              <label for="btn-2" class="show">COMPANY + </label>
+              <a class="a" href="#">COMPANY</a>
+              <input type="checkbox" id="btn-2">
+                <ul class="ul">
+                    <li><a class="a" href="vacanciesprocedure.html">VACANCIES PROCEDURE</a></li>
+                    <li><a class="a" href="choiceofservices.html">CHOICE OF SERVICE</a></li>
+                </ul>
+            </li>
+            <li><a class="a" href="FAQ.html">FAQ</a></li>
+            <li><a class="a" href="careerTips.html">CAREER TIPS</a></li>
+            <li><a class="a" href="Contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+<!-- Isi Disini yak Ges --> 
+    <main id="home" class="home">
+        <div>
+            <div class="item">
+                <div class="slider">
+                    <div class="slide active">
+                      <img src="Welcome cdc.png" alt="">
+                      <div class="info">
+                        <h2>SELAMAT DATANG</h2>
+                        <p>di CDC Politeknik Negeri Jakarta. </p>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <img src="testing1.png" alt="">
+                      <div class="info">
+                        <h2>FUNGSIONALITAS</h2>
+                        <p>
+                          Wadah yang menyediakan informasi bagi mahasiswa tingkat akhir untuk mengembangkan karirnya setelah selesai mejalani pendidikan.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="navigation">
+                      <i class="fas fa-chevron-left prev-btn"></i>
+                      <i class="fas fa-chevron-right next-btn"></i>
+                    </div>
+                    <div class="navigation-visibility">
+                      <div class="slide-icon active"></div>
+                      <div class="slide-icon"></div>
+                    </div>
+                  </div>
+
+                  <script type="text/javascript">
+                    const slider = document.querySelector(".slider");
+                    const nextBtn = document.querySelector(".next-btn");
+                    const prevBtn = document.querySelector(".prev-btn");
+                    const slides = document.querySelectorAll(".slide");
+                    const slideIcons = document.querySelectorAll(".slide-icon");
+                    const numberOfSlides = slides.length;
+                    var slideNumber = 0;
+                
+                    //image slider next button
+                    nextBtn.addEventListener("click", () => {
+                      slides.forEach((slide) => {
+                        slide.classList.remove("active");
+                      });
+                      slideIcons.forEach((slideIcon) => {
+                        slideIcon.classList.remove("active");
+                      });
+                
+                      slideNumber++;
+                
+                      if(slideNumber > (numberOfSlides - 1)){
+                        slideNumber = 0;
+                      }
+                
+                      slides[slideNumber].classList.add("active");
+                      slideIcons[slideNumber].classList.add("active");
+                    });
+                
+                    //image slider previous button
+                    prevBtn.addEventListener("click", () => {
+                      slides.forEach((slide) => {
+                        slide.classList.remove("active");
+                      });
+                      slideIcons.forEach((slideIcon) => {
+                        slideIcon.classList.remove("active");
+                      });
+                
+                      slideNumber--;
+                
+                      if(slideNumber < 0){
+                        slideNumber = numberOfSlides - 1;
+                      }
+                
+                      slides[slideNumber].classList.add("active");
+                      slideIcons[slideNumber].classList.add("active");
+                    });
+                
+                    //image slider autoplay
+                    var playSlider;
+                
+                    var repeater = () => {
+                      playSlider = setInterval(function(){
+                        slides.forEach((slide) => {
+                          slide.classList.remove("active");
+                        });
+                        slideIcons.forEach((slideIcon) => {
+                          slideIcon.classList.remove("active");
+                        });
+                
+                        slideNumber++;
+                
+                        if(slideNumber > (numberOfSlides - 1)){
+                          slideNumber = 0;
+                        }
+                
+                        slides[slideNumber].classList.add("active");
+                        slideIcons[slideNumber].classList.add("active");
+                      }, 4000);
+                    }
+                    repeater();
+                
+                    //stop the image slider autoplay on mouseover
+                    slider.addEventListener("mouseover", () => {
+                      clearInterval(playSlider);
+                    });
+                
+                    //start the image slider autoplay again on mouseout
+                    slider.addEventListener("mouseout", () => {
+                      repeater();
+                    });
+                    </script>
+
+            </div>
+
+            <center>
+                <div class="middleHome">
+                    <div class="judul"><p>Tentang CDC</p></div>
+                    <br>
+                    <div class="isian">
+    
+                        <p>Career Development Center mengemban tugas untuk dapat menjadi pusat sistem pendidikan dan pelatihan yang diperuntukkan bagi alumni Politeknik Negeri Jakarta. 
+                            Lulusan/alumni PNJ menjadi sebuah komponen yang sangat penting dalam rangka meningkatkan akreditasi sebuah perguruan tinggi. 
+                            Keberadaan unit CDC menjadi bagian yang sangat penting di perguruan tinggi, tak terkecuali Politeknik Negeri Jakarta.</p>
+                    </div>
+                </div>
+            </center>  
+            
+            <center>
+            <div class="isianhome">
+              <div class="isianhome2">
+                <hr>
+                <center>
+                  <br>
+                  <p>Profil Politeknik Negeri Jakarta</p>
+                  <iframe width="420" height="315" src="https://www.youtube.com/embed/uDHvJ68HZs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </center>
+              <hr>
+              </div>
+              <br>
+                </center>
+              <div class="isianhome3">
+                <center><h1>Career Development Center</h1></center>
+
+                  <div class="itemhome3">
+                    <h3>1. Alumni</h3>
+                    <p>CDC memberikan informasi terbaru kepada para alumni tentang lowongan kerja, rekruitmen tenaga kerja, 
+                      dan melalui CDC alumni juga dapat memantau berbagai kegiatan tentang informasi pekerjaan yang ada berbagai tempat.</p>
+                  </div>
+
+                  <div class="itemhome3">
+                    <h3>2. Tracer Study untuk Akreditasi Kampus</h3>
+                    <p>CDC merupakan salah aspek yang sangat penting untuk meningkatkan akreditasi yang merupakan keberhasilan 
+                      lulusan di dalam dunia kerja. CDC PNJ mengemban tugas untuk dapat mengintegrasikan tracer study semua 
+                      jurusan dan program studi yang pada akhirnya terpusat. 
+                      Akreditasi merupakan upaya pemerintah untuk menjamin mutu alumni dari sebuah perguruan tinggi. </p>
+                  </div>
+
+                  <div class="itemhome3">
+                    <h3>3. Mengetahui Outcome Pendidikan yang Dihasilkan oleh Perguruan Tinggi</h3>
+                    <p>Pada aspek ini perguruan tinggi pasti akan menghasilkan hasil/outcome. 
+                      Untuk itu, bagaimana perguruan mengetahui outcome sehingga dapat bermanfaat dalam perubahan kondisi sosial, 
+                      budaya, ekonomi masyarakat. Oleh karena itu, kampus sangat perlu kepada pusat karier untuk menampung semua aspirasi 
+                      alumni dalam pengembangan pembangunan sesuai dengan program studi yang digeluti semasa kuliah.</p>
+                  </div>
+
+                  <div class="itemhome3">
+                    <h3>4. Mengetahui Kontribusi Perguruan Tinggi terhadap Kompetensi yang ada di Dunia Kerja</h3>
+                    <p>Aspek ini merupakan misi dari sebuah perguruan tinggi untuk menjadikan mahasiswanya berkompeten 
+                      pada program studi yang mereka pilih. Sedangkan untuk mengetahu seberapa berhasil alumninya, 
+                      maka kampus perlu menyediakan sistem untuk mengukur kontribusi alumni terhadap kampus.</p>
+                  </div>
+
+                  <div class="itemhome3">
+                    <h3>5. Monitoring Lulusan Perguruan Tinggi Ketika Memasuki Dunia Kerja</h3>
+                    <p>Perguruan tinggi menjadi tempat berkumpulnya mahasiswa dari seluruh Indonesia dalam jumlah yang sangat luar biasa. 
+                      Pada setiap semester atau tahun setiap meluluskan alumninya minimal 2 periode wisuda. 
+                      Lulusan akan menyebar keseluruh instansi dan dunia kerja. 
+                      Maka diperlukan strategi untuk merancang dan mempromosikan dari segi geografis atau pun instansi.</p>
+                  </div>
+
+                  <div class="itemhome3">
+                    <h3>6. Membangun Silaturahmi dengan Alumni</h3>
+                    <p>Pada aspek ini perlu dibangun silaturahmi antara alumni dan almamater karena ikatan itu akan 
+                      menghasilkan kemanfaatan, baik bagi alumni maupun perguruan tinggi. 
+                      Menyadari pentingnya hal ini, hampir di setiap perguruan tinggi membuat organisasi kealumnian masing-masing. </p>
+                  </div>
+
+                  <div class="itemhome3">
+                    <h3>7. Evaluasi Perguruan Tinggi</h3>
+                    <p> Evaluasi adalah keharusan bagi perguruan tinggi yang ingin meningkatkan mutu karena  
+                      dengan evaluasi dapat dijadikan dasar pengambilan 
+                      keputusan terkait tingkat keberhasilan yang telah dicapai dan tindakan selanjutnya yang diperlukan.</p>
+                  </div>
+
+              </div>
+
+            </div>
+      
+    </main>
+
+    <!-- Footer --> 
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="logo">CDC </div>
+                <div class="logo" style="font-size:20px; margin-top: 50px; color:black; margin-right: 10px;"> PNJ</div>
+                <div class="footer-col">
+                    <h4>ALAMAT</h4>
+                    <ul>
+                        <li class="alamat" style="color: white;  ">Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>JURUSAN</h4>
+                    <ul>
+                        <li><a href="https://sipil.pnj.ac.id/">Teknik Sipil</a></li>
+                        <li><a href="https://mesin.pnj.ac.id/">Teknik Mesin</a></li>
+                        <li><a href="https://elektro.pnj.ac.id/">Teknik Elektro</a></li>
+                        <li><a href="https://tik.pnj.ac.id/">Teknik Informatika & Komputer</a></li>
+                        <li><a href="https://grafika.pnj.ac.id/">Teknik Grafika & Penerbitan</a></li>
+                        <li><a href="https://akuntansi.pnj.ac.id/">Akuntansi</a></li>
+                        <li><a href="https://bisnis.pnj.ac.id/">Administrasi Niaga</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>PORTAL APLIKASI</h4>
+                    <ul>
+                        <li><a href="https://elearning.pnj.ac.id/">Elearning</a></li>
+                        <li><a href="https://jurnal.pnj.ac.id/">Jurnal PNJ</a></li>
+                        <li><a href="http://opac.perpustakaan.pnj.ac.id/">OPAC</a></li>
+                        <li><a href="https://simpeg.pnj.ac.id/portalsdm/">Simpeg</a></li>
+                        <li><a href="https://simkeu.pnj.ac.id/portal/user/login">Simkeu</a></li>
+                        <li><a href="https://siak.pnj.ac.id/index.php?r=site/login">Siak</a></li>
+                        <li><a href="http://sister.pnj.ac.id/auth/login">Sister</a></li>
+                        <li><a href="#">SIMLITABMAS</a></li>
+                    </ul>
+                </div>
+                    <div class="footer-col">
+                        <h4>HUBUNGI</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/PoliteknikNegeriJakartaOfficial/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/HumasPNJ"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/politekniknegerijakarta/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
